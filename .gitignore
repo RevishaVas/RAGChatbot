@@ -1,18 +1,15 @@
-# Ignore virtual environment
+# Virtual env
 venv/
 
-# Ignore Chroma vector DB
+# Vector DB
 db/
 
-# Ignore environment files
+# Secrets
 .env
 
-# Python cache
+# Caches
 __pycache__/
 *.pyc
 
 # VS Code settings
 .vscode/
-
-
-HospitalReviewsChatBot/

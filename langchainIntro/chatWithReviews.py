@@ -29,3 +29,4 @@ while True:
     # Optional: show where the info came from
     for i, doc in enumerate(result['source_documents'], 1):
         print(f"\n📄 Source {i}:\n{doc.page_content}")
+
