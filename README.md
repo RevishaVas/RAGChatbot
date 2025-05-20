@@ -53,7 +53,7 @@ Install Ollama from [https://ollama.com](https://ollama.com) and run the `phi` m
 ```bash
 ollama run phi
 
-
+```bash
 ##📦 2. Set Up Environment
 git clone https://github.com/RevishaVas/RAGChatbot.git
 cd RAGChatbot
