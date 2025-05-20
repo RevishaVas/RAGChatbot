@@ -44,34 +44,20 @@ RAGChatbot/
 
 ---
 
+
+---
+
 ## 🚀 Quickstart Guide
 
-### 🛠 1. Install Ollama
+### ⚒️ 1. Install Ollama
 
 Install Ollama from [https://ollama.com](https://ollama.com) and run the `phi` model:
 
 ```bash
 ollama run phi
 
-```bash
-##📦 2. Set Up Environment
-git clone https://github.com/RevishaVas/RAGChatbot.git
-cd RAGChatbot
 
-# Create virtual environment
-python -m venv venv
-.\venv\Scripts\activate  # On Windows
-# OR
-source venv/bin/activate  # On macOS/Linux
 
-# Install dependencies
-pip install -r requirements.txt
-
-##📚 3. Build the Vector Database
-python langchainIntro/createRetriever.py #This reads from data/reviews.csv, splits it, embeds it using phi, and stores vectors in Chroma.
-
-##💬 4. Launch the Web Chatbot
-python langchainIntro/webChatBot.py #Your chatbot will open in the browser at http://localhost:7860.
 
 ❓ Example Questions to Try
 "What do patients say about the staff?"
