@@ -26,26 +26,18 @@ The core idea follows a Retrieval-Augmented Generation (RAG) approach — where 
 
 ---
 
+
+## 🖥️ Gradio Web Interface
+![Screenshot 2025-05-20 003843](https://github.com/user-attachments/assets/a9f4fa64-0b4b-4bdf-8994-8e25992fda69)
+
+---
+
 ## 📁 Project Structure
 
-RAGChatbot/
-├── data/
-│ └── reviews.csv # Hospital review data
-├── langchainIntro/
-│ ├── chatbot.py # LLM test
-│ ├── chatWithReviews.py # CLI chatbot
-│ ├── createRetriever.py # Builds vector DB from CSV
-│ └── webChatBot.py # Gradio Web UI
-├── requirements.txt
-├── .env # (ignored)
-├── .gitignore
-├── README.md
-
+![image](https://github.com/user-attachments/assets/ffd923f3-e031-41ab-9908-92f1304f3f60)
 
 ---
 
-
----
 
 ## 🚀 Quickstart Guide
 
@@ -53,25 +45,64 @@ RAGChatbot/
 
 Install Ollama from [https://ollama.com](https://ollama.com) and run the `phi` model:
 
-```bash
+```
 ollama run phi
+```
+### 📦 2. Set Up Environment
+```
+git clone https://github.com/RevishaVas/RAGChatbot.git
+cd RAGChatbot
+```
+```
+# Create virtual environment
+python -m venv venv
+.\venv\Scripts\activate      # On Windows
+
+# OR
+source venv/bin/activate     # On macOS/Linux
+```
+```
+# Install dependencies
+pip install -r requirements.txt
+```
+### 📚 3. Build the Vector Database
+```
+python langchainIntro/createRetriever.py
+```
+This loads reviews.csv, splits the content, creates embeddings with phi, and stores them using ChromaDB.
+
+### 💬 4. Launch the Web Chatbot  
+```
+python langchainIntro/webChatBot.py
+```
+Your browser will open the chatbot at:
+👉 http://localhost:7860
 
 
-
-
-❓ Example Questions to Try
+---
+## ❓ Example Questions to Try
 "What do patients say about the staff?"
+
 "Is the hospital safe and clean?"
+
 "How is the experience with the doctors?"
+
 "What reviews mention patient education?"
 
-⚠️ Notes
+---
+## ⚠️ Notes
 Make sure Ollama is running and the phi model is available.
 The .env and venv/ folders are excluded from Git.
 You can extend the data with more CSV records for broader coverage.
 
-🙌 Acknowledgments
-Real Python: Build a RAG Chatbot with LangChain
+---
+## 🙌 Acknowledgments
+Real Python: Build a RAG Chatbot with LangChain - https://realpython.com/build-llm-rag-chatbot-with-langchain/
+
 LangChain
+
 Ollama
+
 Gradio
+
+ChromaDB
